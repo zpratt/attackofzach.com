@@ -21,26 +21,26 @@ This tutorial assumes that you are on a unix-based system (I used OSX to write t
 
 1.  Create a directory to hold the project and navigate to that directory:
 
-        *   `mkdir &lt;new_dir&gt;`
-    *   `cd &lt;new_dir&gt;`
+    *   `mkdir <new_dir>`
+    *   `cd <new_dir>`
 2.  We'll be installing a bunch of npm modules, so let's run `npm init` to build our package.json file for us
 3.  Let's install [karma](http://karma-runner.github.io/) with npm. I recommend installing it locally, since it's likely that you'll be either executing karma from an IDE (such as webstorm) or as a grunt task. Additionally, one project may be configured for one version of karma while a different project can use a different version if needed.
 
-        *   `npm install karma --save-dev`
+    *   `npm install karma --save-dev`
     *   At the time I wrote this article, the latest stable version of karma was 0.10.8.
 4.  Now we're ready to install mocha:
 
-        *   `npm install mocha --save-dev`
+    *   `npm install mocha --save-dev`
 5.  We'll also need the karma-mocha adapter so we can use mocha as a test framework with karma:
 
-        *   `npm install karma-mocha --save-dev`
+    *   `npm install karma-mocha --save-dev`
 6.  An assertion library will need to included as well. I prefer the [chai assertion library](http://chaijs.com/), since it offers both bdd style assertions using expect and should as well as junit-style assertions.
 
-        *   `npm install karma-chai --save-dev`.
+    *   `npm install karma-chai --save-dev`.
     *   Installing chai this way will make it available as a framework within karma, which makes setup much simpler.
 7.  I also find [sinon](http://sinonjs.org/) to be extremely useful for stubbing and spying, so let's install it to round out our set of packages required to get our test environment provisioned:
 
-        *   `npm install karma-sinon --save-dev`
+    *   `npm install karma-sinon --save-dev`
 
 At this point, our package.json should have a devDependencies directive that looks something like this:
 
